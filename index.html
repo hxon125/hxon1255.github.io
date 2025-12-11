@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.header-inner,
+.about-inner {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 32px; 
+}
+
+.header {
+    background-color: #000;
+    width: 100%;
+    border-bottom: 1px solid #111;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px; 
+    padding-bottom: 25px;
+}
+
+.logo {
+    margin-left: -180px; 
+}
+
+.logo img {
+    height: 50px; 
+    display: block;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin-right: -150px; 
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+    display: block; 
+    padding: 10px 15px; 
+}
+
+.nav a:hover {
+    color: #f60202ec;
+}
+.nav a:active{
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+
+.hero { 
+    overflow: hidden;
+}
+
+.hero img {
+    display: block;
+    width: 100%; 
+    height: auto;
+    object-fit: cover;
+}
+
+.about {
+    background-color: #000;
+    padding-top: 40px; 
+    padding-bottom: 60px;
+}
+
+.about-inner {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 40px;
+    align-items: flex-end;
+    margin-left: 150px; 
+}
+
+.section-title {
+    font-size: 100px; 
+    font-weight: 800;
+    line-height: 1;
+}
+
+.section-text {
+    font-size: 14px;
+    line-height: 1.6;
+    
+}
+
+.footer {
+    background-color: #000;
+    width: 100%;
+    border-top: 1px solid #111; 
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.footer-inner {
+    text-align: center;
+    font-size: 14px;
+}
+
+.copyright {
+    margin-bottom: 5px; 
+}
+
+.disclaimer {
+    margin-top: 5px; 
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .header-inner,
+    .about-inner {
+        padding: 0 16px;
+    }
+
+    .header-inner {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .logo {
+        margin-left: -10px;
+    }
+    .logo img {
+        height: 40px;
+    }
+
+    .nav-list {
+  gap: 10px;
+  margin-right: 0;
+}
+
+.nav a {
+  font-size: 13px;
+  padding: 4px 6px;
+}
+
+
+    .about-inner {
+        grid-template-columns: 1fr;
+        row-gap: 16px;
+        margin-left: 0;
+    }
+
+    .section-title {
+        font-size: 36px;
+    }
+
+    .footer-inner {
+        text-align: center;
+    }
+}
+
+    </style>
+    <title>Avril Lavigne - The Pop Punk Princess</title>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="header-inner"> 
+            <h1 class="logo">
+             <a href="15.Avril.html">
+              <img src="img/avril logo.png" alt="Avril Lavigne 로고">
+            </a>
+         </h1>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="15.timeline.html">Timeline</a></li>
+                    <li><a href="15.music.html">Music</a></li>
+                    <li><a href="15.punk.html">Punk?</a></li>
+                    <li><a href="15.style.html">Style</a></li>
+                    <li><a href="15.gallery.html">Gallery</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        
+        <section class="hero"> 
+            <img src="img/who.jpg" alt="Avril Lavigne 메인 이미지">
+        </section>
+
+        <section class="about">
+            <div class="about-inner"> 
+                <h2 class="section-title">Who is she?</h2>
+                <p class="section-text">
+                    Avril Lavigne is a Canadian singer-songwriter, a representative figure of the pop-punk and pop-rock genres of the 2000s. 
+                    She achieved widespread popularity with her 2002 debut album, "Let Go." With hits like "Complicated" and "Sk8er Boi," 
+                    she became a household name and played a key role in popularizing punk-pop music. Her unique skate-punk style 
+                    and rebellious image earned her the nickname "Pop Punk Princess." Her diverse instrumental playing and musical
+                    experimentation have created a powerful bond within the music industry.
+                </p>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <p class="copyright">
+                © 2025 Avril Lavigne Tribute. All rights reserved.
+            </p>
+            <p class="disclaimer">
+                This is an unofficial fan site. All images and music belong to their respective copyright holders.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: #000;
+    color: #fff;
+  }
+
+  .header {
+    background-color: #000;
+    width: 100%;
+    border-bottom: 1px solid #111;
+  }
+
+  .header-inner {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 25px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    margin-left: -180px;
+  }
+
+  .logo img {
+    height: 50px;
+    display: block;
+  }
+
+  .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin-right: -150px;
+  }
+
+  .nav a {
+    color: #888;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+    display: block;
+    padding: 10px 15px;
+  }
+
+  .nav a:hover {
+    color: #f60202ec;
+  }
+
+  .nav a.active {
+    color: #fff;
+  }
+
+  .punk {
+    background-color: #000;
+    padding: 70px 0 120px;
+    min-height: calc(100vh - 120px);
+  }
+
+  .punk-inner {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    column-gap: 80px;
+    align-items: flex-start;
+  }
+
+  .punk-image {
+    position: relative; 
+    width: 100%;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 800px;
+    margin-top: -70px;
+    overflow: hidden;
+  }
+
+  .punk-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+ .punk-image::after { 
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.6) 80%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  pointer-events: none;
+}
+
+  .punk-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .punk-title {
+    font-size: 90px;
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  .punk-text-box {
+    color: #ffffff;
+    padding: 32px 40px;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-left: -30px; 
+    margin-top: -30px; 
+  }
+
+  .punk-number {
+    font-size: 230px;
+    font-weight: 800;
+  }
+
+  .footer {
+    background-color: #000;
+    width: 100%;
+    border-top: 1px solid #111;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .footer-inner {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .copyright {
+    margin-bottom: 5px;
+  }
+
+  .disclaimer {
+    margin-top: 5px;
+    font-size: 12px;
+    opacity: 0.7;
+  }
+
+  @media (max-width: 768px) {
+    .header-inner {
+      padding: 12px 16px;
+    }
+
+    .logo {
+      margin-left: -10px;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .nav-list {
+      gap: 10px;
+      margin-right: 0;
+    }
+
+    .nav a {
+       font-size: 13px;
+       padding: 4px 6px;
+    }
+
+    .punk {
+      padding: 40px 0 80px;
+    }
+
+    .punk-inner {
+      padding: 0 16px;
+      grid-template-columns: 1fr;
+      row-gap: 32px;
+    }
+
+    .punk-title {
+      font-size: 56px;
+    }
+
+    .punk-text-box {
+      padding: 24px;
+    }
+
+    .punk-number {
+      font-size: 80px;
+    }
+
+      .punk-image {
+    min-height: 320px;
+    margin-top: 0; 
+    }
+
+    .footer-inner {
+      padding: 0 16px;
+      text-align: center;
+    }
+  }
+  </style>
+  <title>Avril Lavigne - Punk?</title>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="img/avril logo.png" alt="Avril Lavigne 로고">
+        </a>
+      </h1>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="15.timeline.html">Timeline</a></li>
+          <li><a href="15.music.html">Music</a></li>
+          <li><a href="15.punk.html" class="active">Punk?</a></li>
+          <li><a href="15.style.html">Style</a></li>
+          <li><a href="15.gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <section class="punk">
+      <div class="punk-inner">
+
+        <div class="punk-image">
+          <img src="img/punk.jpg" alt="Punk 분위기 이미지">
+        </div>
+
+        <div class="punk-content">
+          <h2 class="punk-title">Punk?</h2>
+
+          <div class="punk-text-box">
+            Punk is not just a genre of music, but a subculture that resists the existing order and authority and tries to think for itself.
+             It rebelled against rock music that appeared in the British and American underground in the mid-to-late 1970s and was complicated 
+             by short and fast song structures, three to four chords, rough guitar and straight drums.<br> In particular, 
+             1977 was the year when punk became popular in earnest with the appearance of Sex Pistols and <br>The Clash, 
+             and "Punk "77" is used as a code to symbolize the originality and resistance of early punk. Rather than directly connecting 
+             with this traditional punk, Avril Lavigne is a pop punk icon who combined punk's rebellious attitude with pop melodies to extend punk 
+             into a genre accessible to the wider generation.
+          </div>
+
+          <div class="punk-number">
+            77
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="copyright">
+        © 2025 Avril Lavigne Tribute. All rights reserved.
+      </p>
+      <p class="disclaimer">
+        This is an unofficial fan site. All images and music belong to their respective copyright holders.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

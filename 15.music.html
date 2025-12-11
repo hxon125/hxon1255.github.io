@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.header {
+    background-color: #000;
+    width: 100%;
+    border-bottom: 1px solid #111;
+}
+
+.header-inner {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 25px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+    margin-left: -180px; 
+}
+
+.logo img {
+    height: 50px; 
+    display: block;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin-right: -150px;
+}
+
+.nav a {
+    color: #888;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+    display: block; 
+    padding: 10px 15px; 
+}
+
+.nav a:hover {
+    color: #f60202ec;
+}
+
+.nav a.active {
+    color: #fff;
+}
+
+.music {
+  background-color: #000;
+  padding: 10px 0 120px;
+}
+
+.music-inner {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.music-video {
+  position: relative;
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto 10px;
+  padding-top: 56.25%; 
+  background: #000;
+  overflow: hidden;
+}
+.music-video iframe,
+.music-video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-title {
+  max-width: 1360px;
+  margin: 0px auto 40px;
+  padding: 0 32px;
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px 40px;
+  justify-items: center;
+   margin-top: 200px;
+}
+
+.album-card {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #111;
+}
+
+.album-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.album-info {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+  font-size: 13px;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.album-card:hover img {
+  transform: scale(1.05);
+  opacity: 0.7;
+}
+
+.album-card:hover .album-info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.album-card.text-card {
+  background: #777;
+  color: #fff;
+  text-align: center;
+  padding: 24px;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.album-card.text-card img,
+.album-card.text-card .album-info {
+  display: none;
+}
+
+
+.footer {
+    background-color: #000;
+    width: 100%;
+    border-top: 1px solid #111; 
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.footer-inner {
+    text-align: center;
+    font-size: 14px;
+}
+
+.copyright {
+    margin-bottom: 5px; 
+}
+
+.disclaimer {
+    margin-top: 5px; 
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+
+@media (max-width: 768px) {
+    .header-inner,
+    .music-inner,
+    .timeline-inner,
+    .footer-inner {
+        padding: 0 16px;
+    }
+
+    .header-inner {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .logo {
+        margin-left: -10px;
+    }
+    .logo img {
+        height: 40px;
+    }
+
+    .nav-list {
+        gap: 10px;
+        margin-right: 0;
+    }
+
+    .nav a {
+        font-size: 13px;
+        padding: 4px 6px;
+    }
+
+    /* Music 섹션 */
+    .music-video {
+        height: 220px;
+        font-size: 14px;
+        margin-bottom: 40px;
+    }
+
+    .video-title {
+        padding: 0 16px;
+        font-size: 13px;
+    }
+
+
+    .album-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    .album-card {
+        width: 100%;
+        height: 180px;
+    }
+
+    .album-card.text-card {
+        grid-column: span 2;
+    }
+
+    .timeline-inner {
+        padding: 0 16px;
+        gap: 60px;
+    }
+
+    .timeline-line {
+        left: 16px;
+        transform: none;
+    }
+
+    .timeline-item {
+        justify-content: flex-start;
+    }
+
+    .timeline-item .card {
+        margin: 0 0 0 40px;
+        width: 70%;
+    }
+
+    .footer-inner {
+        text-align: center;
+    }
+}
+</style>
+<title>Avril Lavigne - Music</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-inner"> 
+            <h1 class="logo">
+               <a href="index.html">
+                <img src="img/avril logo.png" alt="Avril Lavigne 로고">
+               </a>
+            </h1>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="15.timeline.html">Timeline</a></li>
+                    <li><a href="15.music.html" class="active">Music</a></li>
+                    <li><a href="15.punk.html">Punk?</a></li>
+                    <li><a href="15.style.html">Style</a></li>
+                    <li><a href="15.gallery.html">Gallery</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <section class="music">
+            <div class="music-inner">
+
+                <div class="music-video">
+                 <video controls width="100%" height="100%">
+                  <source src="sk8or boi.mp4" type="video/mp4">
+                   Your browser does not support the video tag.
+                 </video>
+                </div>
+
+                <p class="video-title">
+                Avril Lavigne – Sk8er Boi (Official Video)
+               </p>
+
+
+                 <div class="album-grid">
+  <div class="album-card">
+    <img src="img/2002.webp" alt="Let Go 앨범 커버">
+    <div class="album-info">
+     <strong>Let Go (2002)</strong><br>
+      A debut album that mixes pop punk and pop rock, featuring high teen anthems like Complicated and <br>Sk8er Boi.
+    </div>
+  </div>
+
+  <div class="album-card">
+    <img src="img/2004.webp" alt="Under My Skin 앨범 커버">
+    <div class="album-info">
+      <strong>Under My Skin (2004)</strong><br>
+      A rock album centered around heavy guitars and dark melodies, with many songs about loss, anger, and anxiety.
+    </div>
+  </div>
+
+  <div class="album-card">
+    <img src="img/2007.webp" alt="The Best Damn Thing 앨범 커버">
+    <div class="album-info">
+        <strong>The Best Damn Thing (2007)</strong><br>
+      A cheer-punk style album full of fast-paced drums, bright guitars, and cheer-like choruses.
+    </div>
+  </div>
+
+  <div class="album-card">
+    <img src="img/2011.webp" alt="Goodbye Lullbay 앨범 커버">
+    <div class="album-info">
+        <strong>Goodbye Lullbay (2011)</strong><br>
+       An album centered around ballads and mid-tempo tracks, with many slow-tempo songs centered around piano and acoustic guitar.
+    </div>
+  </div>
+
+  <div class="album-card">
+    <img src="img/2013.webp" alt="Avril Lavigne 앨범 커버">
+    <div class="album-info">
+        <strong>Avril Lavigne (2013)</strong><br>
+      A mixed-style album that mixes fast-paced songs with an early pop punk feel, electro-pop, and ballads.
+  </div>
+  </div>
+
+  <div class="album-card">
+    <img src="img/2019.webp" alt="Head Above Water 앨범 커버">
+    <div class="album-info">
+        <strong>Head Above Water (2019)</strong><br>
+      An album centered around piano rock ballads and mid-tempo pop rock, with many songs featuring majestic choruses and strong emotional lines.
+    </div>
+  </div> 
+
+  <div class="album-card">
+    <img src="img/2022.webp" alt="Love Sux 앨범 커버">
+    <div class="album-info">
+        <strong>Love Sux (2022)</strong><br>
+       A high-energy album filled with contemporary pop-punk beats, cool guitar riffs, and collaborative tracks featuring a lot of artists.
+    </div>
+  </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <p class="copyright">
+                © 2025 Avril Lavigne Tribute. All rights reserved.
+            </p>
+            <p class="disclaimer">
+                This is an unofficial fan site. All images and music belong to their respective copyright holders.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

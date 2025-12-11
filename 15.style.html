@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: #000;
+    color: #fff;
+  }
+
+  .header {
+    background-color: #000;
+    width: 100%;
+    border-bottom: 1px solid #111;
+  }
+
+  .header-inner {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 25px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    margin-left: -180px;
+  }
+
+  .logo img {
+    height: 50px;
+    display: block;
+  }
+
+  .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin-right: -150px;
+  }
+
+  .nav a {
+    color: #888;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+    display: block;
+    padding: 10px 15px;
+  }
+
+  .nav a:hover {
+    color: #f60202ec;
+  }
+
+  .nav a.active {
+    color: #fff;
+  }
+
+  /* Style 섹션 */
+  .style {
+    background-color: #000;
+    padding: 80px 0 120px;
+  }
+
+  .style-inner {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+    row-gap: 80px;
+    justify-items: center;
+  }
+
+  /* 카드 하나 (이미지 + 텍스트) */
+  .style-card {
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .style-img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* 정사각형 */
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .style-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .style-text {
+    width: 100%;
+    color: #ffffff;
+    font-size: 13px;
+    padding: 10px 12px;
+    text-align: center;
+  }
+
+  .footer {
+    background-color: #000;
+    width: 100%;
+    border-top: 1px solid #111;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .footer-inner {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .copyright {
+    margin-bottom: 5px;
+  }
+
+  .disclaimer {
+    margin-top: 5px;
+    font-size: 12px;
+    opacity: 0.7;
+  }
+
+  /* 모바일 */
+  @media (max-width: 768px) {
+    .header-inner {
+      padding: 12px 16px;
+    }
+
+    .logo {
+      margin-left: -10px;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .nav-list {
+      gap: 10px;
+      margin-right: 0;
+    }
+
+    .nav a {
+      font-size: 13px;
+      padding: 4px 6px;
+    }
+
+    .style {
+      padding: 40px 0 80px;
+    }
+
+    .style-inner {
+      padding: 0 16px;
+      grid-template-columns: 1fr 1fr; /* 2열 그리드 */
+      row-gap: 32px;
+      column-gap: 16px;
+    }
+
+    .style-card {
+      width: 100%;
+    }
+
+    .style-text {
+      font-size: 12px;
+      padding: 8px 10px;
+    }
+
+    .footer-inner {
+      padding: 0 16px;
+      text-align: center;
+    }
+  }
+
+  /* 더 작은 화면에서 1열로 바꾸고 싶으면 추가 */
+  @media (max-width: 480px) {
+    .style-inner {
+      grid-template-columns: 1fr;
+    }
+  }
+  </style>
+  <title>Avril Lavigne - Style</title>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="img/avril logo.png" alt="Avril Lavigne 로고">
+        </a>
+      </h1>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="15.timeline.html">Timeline</a></li>
+          <li><a href="15.music.html">Music</a></li>
+          <li><a href="15.punk.html">Punk?</a></li>
+          <li><a href="15.style.html" class="active">Style</a></li>
+          <li><a href="15.gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <section class="style">
+      <div class="style-inner">
+
+        <div class="style-card">
+          <div class="style-img">
+            <img src="img/tie.jpg" alt="스타일 1">
+          </div>
+          <div class="style-text">
+            <h4>Tie (necktie) + Sleeveless top</h4><br>
+            Punk’s Twist on School Uniforms & Suits, with 2000s Attitude
+          </div>
+        </div>
+
+        <div class="style-card">
+          <div class="style-img">
+            <img src="img/sneakers.jpg" alt="스타일 2">
+          </div>
+          <div class="style-text">
+            <h4>Converse / Skate Shoes</h4><br>
+            The point where the rebellious energy on stage intersects with the realistic style of the street
+          </div>
+        </div>
+
+        <div class="style-card">
+          <div class="style-img">
+            <img src="img/jacket.jpg" alt="스타일 3">
+          </div>
+          <div class="style-text">
+            <h4>Leather jacket</h4><br>
+            Symbolizes that punk is not just music, it's “attitude” and “lifestyle”
+          </div>
+        </div>
+
+        <div class="style-card">
+          <div class="style-img">
+            <img src="img/stud.jpg" alt="스타일 4">
+          </div>
+          <div class="style-text">
+            <h4>Studded leather bracelet / Wristband</h4><br>
+            Punk accessories representing DIY spirit and resistance
+          </div>
+        </div>
+
+        <div class="style-card">
+          <div class="style-img">
+            <img src="img/chain.jpg" alt="스타일 5">
+          </div>
+          <div class="style-text">
+            <h4>Torn skinny jeans or Chain details</h4><br>
+            77 Punk → 2000s visual loop leading to pop punk
+          </div>
+        </div>
+
+        <div class="style-card">
+          <div class="style-img">
+            <img src="img/red.jpg" alt="스타일 6">
+          </div>
+          <div class="style-text">
+            <h4>Red Tartan (Plaid)</h4><br>
+            School uniform reinterpreted as rebellion
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="copyright">
+        © 2025 Avril Lavigne Tribute. All rights reserved.
+      </p>
+      <p class="disclaimer">
+        This is an unofficial fan site. All images and music belong to their respective copyright holders.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
